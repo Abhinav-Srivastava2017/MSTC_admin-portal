@@ -11,9 +11,9 @@
 </head>
 <body>
     <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary">TECHNICAL</button>
-        <button type="button" class="btn btn-primary">MANAGEMENT</button>
-        <button type="button" class="btn btn-primary">DESIGN</button>
+        <button type="button" class="btn btn-primary" onclick="getData(this.innerHTML)">TECHNICAL</button>
+        <button type="button" class="btn btn-primary" onclick="getData(1)">MANAGEMENT</button>
+        <button type="button" class="btn btn-primary" onclick="getData(2)">DESIGN</button>
     </div>
 
     <div class="row">
@@ -28,13 +28,13 @@
                             <th>Evaluated</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
+                    <tbody id="rows">
+                        <!-- <tr>
                             <td>#</td>
                             <td><a href="#">17BCE0733</a></td>
                             <td>Abhinav Srivastava</td>
                             <td>True</td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
