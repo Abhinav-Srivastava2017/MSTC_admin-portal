@@ -34,3 +34,11 @@ function getData(value) {
         $("#rows").append("<tr><td>"+(count++)+"</td><td><a href='"+respo.htm+"' onclick='disp(this.innerHTML())'>"+global[i].regno+"</a></td><td>"+global[i].name+"</td><td>"+global[i].eval+"</td></tr>")
     }
 }
+//function for displaying responses
+function disp(param) {
+    for(let i in global){
+        if(global[i].regno==param){
+            
+        }
+    }
+}
