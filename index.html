@@ -16,7 +16,7 @@
         <button type="button" class="btn btn-primary" onclick="getData(2)">DESIGN</button>
     </div>
 
-    <div class="row">
+    <div class="row" id="data" style="display: none">
         <div class="col-lg-4">
             <div class="table-responsive">
                 <table class="table">
@@ -31,7 +31,7 @@
                     <tbody id="rows">
                         <!-- <tr>
                             <td>#</td>
-                            <td><a href="respo.htm" onclick="getData(this.innerHTML())">17BCE0733</a></td>
+                            <td class='text-primary' style='text-decoration:underline;cursor: pointer' onclick='getData(this.innerHTML)'>17BCE0733</td>
                             <td>Abhinav Srivastava</td>
                             <td>True</td>
                         </tr> -->
@@ -40,7 +40,71 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <div class="container-fluid" id="respo" style="display:none">
+        <div class="row">
+            <div class="col-lg-4">
+                <p id="q1"></p>
+                <p id="a1"></p>
+            </div>
+            <div class="col-lg-4">
+                <p id="q2"></p>
+                <p id="a2"></p>
+            </div>
+            <div class="col-lg-4">
+                <p id="q3"></p>
+                <p id="a3"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p id="q4"></p>
+                <p id="a4"></p>
+            </div>
+            <div class="col-lg-4">
+                <p id="q5"></p>
+                <p id="a5"></p>
+            </div>
+            <div class="col-lg-4">
+                <p id="q6"></p>
+                <p id="a6"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p id="q7"></p>
+                <p id="a7"></p>
+            </div>
+            <div class="col-lg-4">
+                <p id="q8"></p>
+                <p id="a8"></p>
+            </div>
+            <div class="col-lg-4">
+                <p id="q9"></p>
+                <p id="a9"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p id="q10"></p>
+                <p id="a10"></p>
+            </div>
+        </div>
+        <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="" id="select">
+                <label class="form-check-label" for="select">SELECTED</label>
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="name" class="sr-only">EVAVLUATOR</label>
+                <input type="text" class="form-control" id="name" placeholder="Your name">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2" onclick="sub()">Submit</button>
+        <!-- <input type="checkbox" name="select" id="select" value="true">
+        <input type="text" id="name" placeholder="Evaluator's name">
+        <p id="test"></p> -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
     <script src="main.js"></script> 

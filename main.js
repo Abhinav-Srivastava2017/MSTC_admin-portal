@@ -1,5 +1,6 @@
 let durl,global;
 function getData(value) {
+    console.log(value);
     if(value==0){
         //url for technical
         // durl = 
@@ -13,6 +14,10 @@ function getData(value) {
         //durl =
     }
 
+    db();
+}
+//function to get the database
+function db(){
     $.ajax({
         type: "GET",
         url: durl,
@@ -21,22 +26,24 @@ function getData(value) {
         success: function(data){
             console.log(data);
             global=data;
+            //function to display the data of students
+            $("#data").fadeIn(1000);
+            let count=0; //for serial number
+            for(let i in global){
+            $("#rows").append("<tr><td>"+(count++)+"</td><td class='text-primary' style='text-decoration:underline;cursor: pointer' onclick='disp(this.innerHTML)'>"+global[i].regno+"</td><td>"+global[i].name+"</td><td>"+global[i].eval+"</td></tr>")
+            }
         },
         error: function(){
             alert("error");
         }
     });
-
-    //function to display the data of students
-    let count=0; //for serial number
-    let url
-    for(let i in global){
-        $("#rows").append("<tr><td>"+(count++)+"</td><td><a href='"+respo.htm+"' onclick='disp(this.innerHTML())'>"+global[i].regno+"</a></td><td>"+global[i].name+"</td><td>"+global[i].eval+"</td></tr>")
-    }
 }
 let regno;
 //function for displaying responses
 function disp(param) {
+    $("#data").fadeOut(1000,function() {
+        $("#respo").fadeIn(1000);
+    });
     for(let i in global){
         if(global[i].regno==param){
             $("#q1").html(global[i].question1);
@@ -68,6 +75,8 @@ function disp(param) {
 
             $("#q10").html(global[i].question10);
             $("#a10").html(global[i].answer10);
+
+            break;
         }
     }
 }
@@ -90,7 +99,9 @@ function sub() {
         async: false,
         success: function(data) {
             alert("Response submitted");
-            window.location.href = "index.html";
+            $("#respo").fadeOut(1000,function() {
+                db();
+            });
         },
         error: function(){
             alert("error");
