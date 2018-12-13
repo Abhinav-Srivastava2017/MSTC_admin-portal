@@ -1,6 +1,7 @@
 let durl,global;
 function getData(value) {
     console.log(value);
+    $("#data").fadeOut(1000);
     if(value==0){
         //url for technical
         durl = "https://mstc-ccr-admin.herokuapp.com/tech";
@@ -27,6 +28,7 @@ function db(){
             console.log(data);
             global=data;
             //function to display the data of students
+            $("#rows").html("");
             $("#data").fadeIn(1000);
             let count=0; //for serial number
             for(let i in global){
@@ -43,6 +45,7 @@ let regno;
 function disp(param) {
     regno=param;
     $("#data").fadeOut(1000,function() {
+        $("#domains").fadeOut(1000);
         $("#respo").fadeIn(1000);
     });
     for(let i in global){
@@ -84,7 +87,7 @@ function disp(param) {
 //back function
 function back() {
     $("#respo").fadeOut(1000,function() {
-        $("#rows").html("");
+        $("#domains").fadeIn(1000);
         db();
     });
 }
