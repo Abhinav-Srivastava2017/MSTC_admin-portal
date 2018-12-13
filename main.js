@@ -30,7 +30,7 @@ function db(){
             $("#data").fadeIn(1000);
             let count=0; //for serial number
             for(let i in global){
-            $("#rows").append("<tr><td>"+(++count)+"</td><td class='text-primary' style='text-decoration:underline;cursor: pointer' onclick='disp(this.innerHTML)'>"+global[i].reg+"</td><td>"+global[i].name+"</td><td>"+global[i].evaluated+"</td></tr>")
+            $("#rows").append("<tr><td>"+(++count)+"</td><td class='text-primary' style='text-decoration:underline;cursor: pointer' onclick='disp(this.innerHTML)'>"+global[i].reg+"</td><td>"+global[i].selected+"</td><td>"+global[i].evaluated+"</td></tr>")
             }
         },
         error: function(){
@@ -47,31 +47,31 @@ function disp(param) {
     });
     for(let i in global){
         if(global[i].reg==param){
-            $("#q1").text(global[i].question1);
+            $("#q1").html(global[i].question1);
             $("#a1").text(global[i].answer1);
 
-            $("#q2").text(global[i].question2);
+            $("#q2").html(global[i].question2);
             $("#a2").text(global[i].answer2);
 
-            $("#q3").text(global[i].question3);
+            $("#q3").html(global[i].question3);
             $("#a3").text(global[i].answer3);
 
-            $("#q4").text(global[i].question4);
+            $("#q4").html(global[i].question4);
             $("#a4").text(global[i].answer4);
 
-            $("#q5").text(global[i].question5);
+            $("#q5").html(global[i].question5);
             $("#a5").text(global[i].answer5);
 
-            $("#q6").text(global[i].question6);
+            $("#q6").html(global[i].question6);
             $("#a6").text(global[i].answer6);
 
-            $("#q7").text(global[i].question7);
+            $("#q7").html(global[i].question7);
             $("#a7").text(global[i].answer7);
 
-            $("#q8").text(global[i].question8);
+            $("#q8").html(global[i].question8);
             $("#a8").text(global[i].answer8);
 
-            $("#q9").text(global[i].question9);
+            $("#q9").html(global[i].question9);
             $("#a9").text(global[i].answer9);
 
             $("#q10").html(global[i].question10);
