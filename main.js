@@ -81,6 +81,13 @@ function disp(param) {
         }
     }
 }
+//back function
+function back() {
+    $("#respo").fadeOut(1000,function() {
+        $("#rows").html("");
+        db();
+    });
+}
 
 //submitting the evaluators response
 function sub() {
@@ -103,9 +110,7 @@ function sub() {
         async: false,
         success: function(data) {
             alert("Response submitted");
-            $("#respo").fadeOut(1000,function() {
-                db();
-            });
+            back();
         },
         error: function(){
             alert("error");
